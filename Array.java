@@ -40,7 +40,7 @@ public class Array {
     return smallest;
   }
 
-  static int isEven(int[] arr) 
+  static int NoofEven(int[] arr) 
   {
     int count = 0;
     for(int i=0; i<arr.length; i++)
@@ -73,14 +73,14 @@ public class Array {
       {
         beg = arr[i];
         end = arr[arr.length - 1 - i];
-        
+
         arr[i] = end;
         arr[arr.length - 1 - i] = beg;
       }
       return arr;
     }
   
-  public static void main(String[] args)
+  public static void main(StringMethod[] args)
   {
     System.out.print("Enter the size of the array - ");
     Scanner sc = new Scanner(System.in);
@@ -96,7 +96,7 @@ public class Array {
     System.out.println("Sum of elements of array is : " + sum(arr));
     System.out.println("Largest element of array is : " + largest(arr));
     System.out.println("Smallest element of array is : " + smallest(arr));
-    System.out.println("Number of even elements of array are : " + isEven(arr));
+    System.out.println("Number of even elements of array are : " + NoofEven(arr));
 
     System.out.print("Enter the target element to search in array : ");
     int target = sc.nextInt();
