@@ -26,3 +26,12 @@ Day 4 : Strings
         7.) First occurrence of a character 
         8.) Remove all spaces from a String.
         9.) Character that occurs the most in a String.
+
+Day 5 : OOP basics
+       1.) Student class with name, age, and rollNo. 
+       2.) Rectangle class and calculate area and perimeter 
+       3.) BankAccount class with private balance, deposit(), withdraw(), and getBalance().
+       4.) Employee class with name, salary, and department
+       5.) Product class with private price. Use a setter that doesn't allow a negative price.
+       6.) Student class with private marks. Allow marks only between 0 and 100.
+       7.) BankAccount where withdraw() refuses the transaction if the withdrawal amount is greater than the balance.
