@@ -35,3 +35,11 @@ Day 5 : OOP basics
        5.) Product class with private price. Use a setter that doesn't allow a negative price.
        6.) Student class with private marks. Allow marks only between 0 and 100.
        7.) BankAccount where withdraw() refuses the transaction if the withdrawal amount is greater than the balance.
+
+Day 6 : Inheritence
+
+Day 7 : Polymorphism
+
+Day 8 : Abstraction
+
+Day 9 : Interface
