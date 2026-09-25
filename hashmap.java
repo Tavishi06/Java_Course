@@ -27,7 +27,7 @@ public class hashmap {
 
         for (Map.Entry<Integer, String> entry : students.entrySet()) {
 
-            System.out.println("ID: " + entry.getKey() + ", Name: " + entry.getValue());
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
         }
 
         // to find student name by id
