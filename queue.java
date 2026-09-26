@@ -1,97 +1,130 @@
 
-import java.util.Queue;
-import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Collections;
 
 public class queue {
 
     public static void main(String[] args) {
 
-        // Creating Queue
-        Queue<Integer> queue = new LinkedList<>();
+        // ==========================================
+        // MIN PRIORITY QUEUE
+        // Smallest element has highest priority
+        // ==========================================
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
         // 1. add()
-        queue.add(10);
-        queue.add(20);
-        queue.add(30);
+        pq.add(30);
+        pq.add(10);
+        pq.add(20);
 
-        System.out.println("Queue after add(): " + queue);
+        System.out.println("PriorityQueue after add(): " + pq);
 
         // 2. offer()
-        queue.offer(40);
+        pq.offer(40);
 
-        System.out.println("Queue after offer(): " + queue);
+        System.out.println("PriorityQueue after offer(): " + pq);
 
         // 3. peek()
-        System.out.println("Front element using peek(): " + queue.peek());
+        System.out.println("Highest priority using peek(): " + pq.peek());
 
         // 4. element()
-        System.out.println("Front element using element(): " + queue.element());
+        System.out.println("Highest priority using element(): " + pq.element());
 
         // 5. contains()
-        System.out.println("Does queue contain 20? " + queue.contains(20));
+        System.out.println("Does PriorityQueue contain 20? "
+                + pq.contains(20));
 
         // 6. size()
-        System.out.println("Queue size: " + queue.size());
+        System.out.println("PriorityQueue size: " + pq.size());
 
         // 7. poll()
-        System.out.println("Removed using poll(): " + queue.poll());
+        System.out.println("Removed using poll(): " + pq.poll());
 
-        System.out.println("Queue after poll(): " + queue);
+        System.out.println("PriorityQueue after poll(): " + pq);
 
         // 8. remove()
-        System.out.println("Removed using remove(): " + queue.remove());
+        System.out.println("Removed using remove(): " + pq.remove());
 
-        System.out.println("Queue after remove(): " + queue);
+        System.out.println("PriorityQueue after remove(): " + pq);
 
         // 9. isEmpty()
-        System.out.println("Is queue empty? " + queue.isEmpty());
+        System.out.println("Is PriorityQueue empty? "
+                + pq.isEmpty());
 
         // 10. clear()
-        queue.clear();
+        pq.clear();
 
-        System.out.println("Queue after clear(): " + queue);
+        System.out.println("PriorityQueue after clear(): " + pq);
 
-        // Checking again
-        System.out.println("Is queue empty now? " + queue.isEmpty());
-        
-        
-        /**  EMPTY QUEUE BEHAVIOR TESTS  **/
-        
-        System.out.println("\n--- Empty Queue Tests ---");
-        
-        // peek() on empty queue
-        System.out.println("peek(): " + queue.peek());
-
-        // poll() on empty queue
-        System.out.println("poll(): " + queue.poll());
-
-        // contains() on empty queue
-        System.out.println("contains(10): " + queue.contains(10));
-
-        // size() on empty queue
-        System.out.println("size(): " + queue.size());
-
-        // isEmpty() on empty queue
-        System.out.println("isEmpty(): " + queue.isEmpty());
+        System.out.println("Is PriorityQueue empty now? "
+                + pq.isEmpty());
 
 
-        // element() on empty queue
+        // ==========================================
+        // EMPTY PRIORITY QUEUE BEHAVIOR
+        // ==========================================
+
+        System.out.println("\n--- Empty PriorityQueue Tests ---");
+
+        // peek() on empty PriorityQueue
+        System.out.println("peek(): " + pq.peek());
+
+        // poll() on empty PriorityQueue
+        System.out.println("poll(): " + pq.poll());
+
+        // contains() on empty PriorityQueue
+        System.out.println("contains(10): " + pq.contains(10));
+
+        // size() on empty PriorityQueue
+        System.out.println("size(): " + pq.size());
+
+        // isEmpty() on empty PriorityQueue
+        System.out.println("isEmpty(): " + pq.isEmpty());
+
+
+        // element() on empty PriorityQueue
         try {
-            System.out.println("element(): " + queue.element());
-        } 
-        catch (Exception e) {
+            System.out.println("element(): " + pq.element());
+        } catch (Exception e) {
             System.out.println("element(): Exception - "
-            + e.getClass().getSimpleName());
+                    + e.getClass().getSimpleName());
         }
 
 
-        // remove() on empty queue
+        // remove() on empty PriorityQueue
         try {
-        System.out.println("remove(): " + queue.remove());
-        }
-        catch (Exception e) {
+            System.out.println("remove(): " + pq.remove());
+        } catch (Exception e) {
             System.out.println("remove(): Exception - "
-            + e.getClass().getSimpleName());
+                    + e.getClass().getSimpleName());
+        }
+
+
+        // ==========================================
+        // MAX PRIORITY QUEUE
+        // Largest element has highest priority
+        // ==========================================
+
+        PriorityQueue<Integer> maxPQ =
+                new PriorityQueue<>(Collections.reverseOrder());
+
+        maxPQ.add(10);
+        maxPQ.add(50);
+        maxPQ.add(30);
+        maxPQ.add(20);
+        maxPQ.add(40);
+
+        System.out.println("\n--- Max PriorityQueue ---");
+
+        System.out.println("Max PriorityQueue: " + maxPQ);
+
+        System.out.println("Highest priority: " + maxPQ.peek());
+
+        System.out.println("Removing elements by priority:");
+
+        while (!maxPQ.isEmpty()) {
+            System.out.println(maxPQ.poll());
         }
     }
 }
