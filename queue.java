@@ -53,5 +53,45 @@ public class queue {
 
         // Checking again
         System.out.println("Is queue empty now? " + queue.isEmpty());
+        
+        
+        /**  EMPTY QUEUE BEHAVIOR TESTS  **/
+        
+        System.out.println("\n--- Empty Queue Tests ---");
+        
+        // peek() on empty queue
+        System.out.println("peek(): " + queue.peek());
+
+        // poll() on empty queue
+        System.out.println("poll(): " + queue.poll());
+
+        // contains() on empty queue
+        System.out.println("contains(10): " + queue.contains(10));
+
+        // size() on empty queue
+        System.out.println("size(): " + queue.size());
+
+        // isEmpty() on empty queue
+        System.out.println("isEmpty(): " + queue.isEmpty());
+
+
+        // element() on empty queue
+        try {
+            System.out.println("element(): " + queue.element());
+        } 
+        catch (Exception e) {
+            System.out.println("element(): Exception - "
+            + e.getClass().getSimpleName());
+        }
+
+
+        // remove() on empty queue
+        try {
+        System.out.println("remove(): " + queue.remove());
+        }
+        catch (Exception e) {
+            System.out.println("remove(): Exception - "
+            + e.getClass().getSimpleName());
+        }
     }
 }
