@@ -72,5 +72,6 @@ public class hashmap {
         {
             System.out.println("Student id not found.");
         }
+        sc.close();
     }
 }
